@@ -36,13 +36,13 @@ Difficulty: <font color='green'>Easy</font>
 # Enumeration
 
 When examining the .pcapng file, users should focus on analyzing TCP traffic. Within TCP stream 3, they will encounter the contents of the discordnitro.ps1 malicious script being downloaded by the victim.
-
+<img src='assets/writeup5.png' style='zoom: 30%;'/>
 <img src='assets/writeup1.png' style='zoom: 30%;'/>
 
 The PowerShell script requires deobfuscation. The value of the variable $jozeq3n must be reversed and then decoded from Base64 to reveal the malicious PowerShell script.
 
 <img src='assets/writeup2.png' style='zoom: 30%;'/>
-
+<img src='assets/writeup4.png' style='zoom: 30%;'/>
 Within this script, users will discover the first part of the flag.
 ```powershell
 $part1 = "SFRCe2ZyMzNfTjE3cjBHM25fM3hwMDUzZCFf"
@@ -76,7 +76,8 @@ catch {}
 # Solution
 
 In TCP stream 48, a user can uncover data transmitted from the victim's computer. By leveraging known AES parameters, they can decrypt this data to retrieve the second part of the flag, which resides within the email field.
-
+<img src='assets/writeup6.png' style='zoom: 30%;'/>
+<img src='assets/writeup7.png' style='zoom: 30%;'/>
 ```python
 from Crypto.Cipher import AES
 import base64
