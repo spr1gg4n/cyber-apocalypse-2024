@@ -18,7 +18,7 @@ def to_ascii(data):
     return data.decode().strip()
 
 # Function to read data from memory at a given address
-def read_memory(address, secret=False):
+def read_memory(r, address, secret=False):
     r.sendlineafter(b"> ", b"set_ce_pin(0)")
     r.sendlineafter(b"> ", b"set_oe_pin(0)")
     r.sendlineafter(b"> ", b"set_we_pin(5)")
@@ -35,10 +35,10 @@ def read_memory(address, secret=False):
 # Function to get the flag
 def get_flag(r):
     flag = ""
-    for address in range(0x7e0, 0x7ff + 1): # Reading data from memory in the specified range of addresses
-        data = read_memory(r, address, secret=True) # Reading data in secret mode
-        byte = data[5:-17] # Getting a byte from the data
-        flag += chr(eval(byte)) # Converting the byte to ASCII character and appending to flag
+    for address in range(0x7e0, 0x7ff + 1):
+        data = read_memory(r, address, secret=True)
+        byte = data[5:-17]
+        flag += chr(eval(byte))
     return flag
 
 
