@@ -3,6 +3,7 @@
 #python3 solver.py --ip 127.0.0.1 --port 12345
 
 from pwn import *
+import argparse
 
 # Function to convert a byte to a list of voltages on pins
 def byte_to_volts(byte):
