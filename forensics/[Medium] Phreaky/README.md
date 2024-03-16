@@ -12,6 +12,8 @@ Difficulty: <font color=green>Easy</font>
 
 Classification: Official
 
+
+
 # Synopsis
 
 Phreaky is an easy forensics challenge involving detecting SMTP exfiltration and reconstructing the exfiltrated file to retrieve the flag.
