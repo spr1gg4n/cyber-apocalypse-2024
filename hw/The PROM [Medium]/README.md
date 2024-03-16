@@ -1,6 +1,4 @@
-![img](../../../../../assets/banner.png)
-
-<img src='../../../../../assets/htb.png' style='margin-left: 20px; zoom: 80%;' align=left /> <font size='10'>The PROM</font>
+<font size='10'>The PROM</font>
 
 28<sup>th</sup> 2022 / Document No. D22.102.16
 
