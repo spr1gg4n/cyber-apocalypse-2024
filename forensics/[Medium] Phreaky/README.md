@@ -41,7 +41,7 @@ Enter the artifacts provided along with their file hash here.
 We are provided with a pcap and a scenario to locate the insider threat within the Phreaks. As per any packet capture we import into the Brim tool initially to locate the conversations and hosts within the packet capture. 
 
 ![image-20240307210526796](./assets/image-20240307210526796.png)
-<img src='assets/image-20240307210526796.png'/>
+<img src='assets/image-20240307210526796.png' style='zoom: 30%;'/>
 
 
 ![image-20240307210539350](./assets/image-20240307210539350.png)
